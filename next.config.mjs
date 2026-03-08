@@ -1,11 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Required for GitHub Pages static hosting
-  basePath: '/uncensored-gen', // Must match your GitHub repo name
-  assetPrefix: '/uncensored-gen/', 
+  output: 'export',          // Required: Tells Next.js to build a static site
+  basePath: '/uncensored-gen', // Required: Tells Next.js your site is at a sub-folder
   images: {
-    unoptimized: true, // Prevents errors with external AI images on static sites
+    unoptimized: true,       // Required: GitHub Pages doesn't support Next.js image optimization
   },
 };
 
 export default nextConfig;
+
+
